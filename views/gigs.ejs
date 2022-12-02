@@ -30,7 +30,13 @@
                                 </span>
                             </h3>
                         </li>
-                        <li><a href="mailto:<%- gig.contact_email %>" class="btn btn-reverse">Apply Now</a></li>
+                        <li>
+                            <a 
+                                href="mailto:<%- gig.contact_email %>?subject=I'm interested in your gig: <%- gig.title %>"
+                                class="btn btn-reverse">
+                                Apply Now
+                            </a>
+                        </li>
                     </ul>
                     <div class="tech">
                         <small>Technologies Needed: <span><%- gig.technologies %></span></small>

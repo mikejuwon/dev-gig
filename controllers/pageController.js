@@ -137,7 +137,6 @@ const searchGigs = async (req, res) => {
                 }
             }
         });
-        console.log(totalGigs);
         res.render("gigs", { gigs, moment, current: currentPage, pages: Math.ceil(totalGigs / limit), term, result: totalGigs });
     } catch (err) {
         console.log(err);
@@ -197,6 +196,7 @@ const updateGig = async (req, res) => {
         console.log(err);
     }
 };
+
 
 module.exports = {
     homePage,
