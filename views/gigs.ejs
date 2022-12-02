@@ -3,9 +3,13 @@
 <section id="gigs" class="container">
     <h1>
         <% if (result  && result > 0) { %>
-            <span class="text-primary"><%- result %></span> gigs found for <span class="text-primary">"<%- term %>"</span>
-        <% } else { %>
-            All gigs
+            <span class="text-primary"><%- result %></span> gig(s) found for <span class="text-primary">"<%- term %>"</span>
+        <% } %>
+        <% if (result && result == 0) { %> 
+            <span class="text-primary">No</span> gigs found for <span class="text-primary">"<%- term %>"</span>
+        <% } %>
+        <% if (result === null) { %> 
+           All gigs
         <% } %>
     </h1>
 

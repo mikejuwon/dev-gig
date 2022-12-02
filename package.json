@@ -28,5 +28,9 @@
   "devDependencies": {
     "@types/lru-cache": "^7.10.10",
     "nodemon": "^2.0.20"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=7.0.0"
   }
 }
