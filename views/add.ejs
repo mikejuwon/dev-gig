@@ -1,18 +1,22 @@
 <%- include("partials/header", { title: "inner" }) -%>
 
 <section id="add" class="container">
-    <div class="form-wrap">
-      <h1>Add A Gig</h1>
-      <p>Your contact email will be shared with registered users to apply to your gig</p>
+  
+  <div class="form-wrap">
+    <h1>Add A Gig</h1>
+    <p>Your contact email will be shared with registered users to apply to your gig</p>
+    
+    <%- include("components/alert") %>
+
       <form action="/add-gig" method="post">
         <div class="input-group">
           <label for="title">Gig Title</label>
-          <input type="text" name="title" id="title" class="input-box" placeholder="eg. Small Wordpress website, React developer"
+          <input type="text" name="title" id="title" class="input-box" value="<%- title ? title : '' %>" placeholder="eg. Small Wordpress website, React developer"
             maxlength="100" required>
         </div>
         <div class="input-group">
           <label for="technologies">Technologies Needed</label>
-          <input type="text" name="technologies" id="technologies" class="input-box" placeholder="eg. javascript, react, PHP"
+          <input type="text" name="technologies" id="technologies" class="input-box" value="<%- technologies ? technologies : '' %>" placeholder="eg. javascript, react, PHP"
           maxlength="100">
         </div>
         <div class="input-group">
@@ -21,12 +25,12 @@
         </div>
         <div class="input-group">
           <label for="description">Gig Description</label>
-          <textarea name="description" id="description" class="input-box" placeholder="Describe the details of the gig"
-            rows="10" required></textarea>
+          <textarea name="description" id="description" class="input-box" placeholder="Give a description of the gig... eg. I need a small website built with Wordpress, I need a React developer to build a small app"
+            rows="10" required><%- description %></textarea>
         </div>
         <div class="input-group">
           <label for="budget">Contact Email</label>
-          <input type="email" name="contact_email" id="contactemail" class="input-box" placeholder="Enter an email"
+          <input type="email" name="contact_email" id="contactemail" class="input-box" value="<%- contact_email ? contact_email : '' %>" placeholder="Enter an email"
             required>
         </div>
         <input type="submit" value="Add Gig" class="btn btn-reverse">
