@@ -11,3 +11,10 @@ node_modules
 /.yarnrc.yml
 /.yarn-unplugged
 /.yarn
+Dockerfile
+Dockerfile.*
+docker-compose.yml
+docker-compose.*
+.dockerignore
+.env
+.env.*
