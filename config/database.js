@@ -1,6 +1,6 @@
 const Sequelize = require('sequelize');
 
-module.exports = new Sequelize(process.env.DB_URI, {
+module.exports = new Sequelize(process.env.DB_URI, null, null, {
     dialect: 'postgres',
     OperatorAliases: 0,
     pool: {
