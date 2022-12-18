@@ -1,9 +1,9 @@
 const Sequelize = require('sequelize');
 
-module.exports = new Sequelize(process.env.DB_URI, null, null, {
+module.exports = new Sequelize(process.env.DB_URI, process.env.DB_USER, process.env.DB_PASS, {
     dialect: 'postgres',
     OperatorAliases: 0,
-    host: "0.0.0.0",
+    host: process.env.DB_HOST || 'localhost',
     pool: {
         max: 5,
         min: 0,
