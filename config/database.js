@@ -3,7 +3,7 @@ const Sequelize = require('sequelize');
 module.exports = new Sequelize(process.env.DB_URI, process.env.DB_USER, process.env.DB_PASS, {
     dialect: 'postgres',
     OperatorAliases: 0,
-    host: process.env.DB_HOST || 'localhost',
+    host: process.env.DB_URI || 'localhost',
     pool: {
         max: 5,
         min: 0,
